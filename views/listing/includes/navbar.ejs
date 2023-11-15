@@ -1,0 +1,47 @@
+
+<nav class="navbar navbar-expand-md bg-body-tertiary sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/listing"><i class="fa-solid fa-truck-plane"></i></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/listing"><b><h4>Explore</h4></b></a>
+          </li>
+          
+        </ul>
+        <div class="navbar-nav ms-auto">
+          <nav class="navbar navbar-light bg-light">
+            <form class="d-flex" action="/upcomming">
+              <input class="form-control me-2 search-input" type="search" placeholder="Search Destination" aria-label="Search">
+              <button class="btn btn-search my-2 my-sm-0" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+          </nav>
+        </div>
+         <ul class="navbar-nav ms-auto">
+          <% if (! currUser){ %>
+          <li class="nav-item">
+             <a class="nav-link active" aria-current="page" href="/signup"><b>Sign-Up</b></a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link" href="/login"><b>Log in</b></a>
+           </li> <% } %>
+           <% if ( currUser){ %>
+            <li class="nav-item">
+              <a class="nav-link" href="/listing/new">Airbnb Your home</a>
+            </li>
+           <li class="nav-item">
+             <a class="nav-link" href="/logout"><b>Log out</b></a>
+           </li>
+           <% } %>
+      </ul>
+            
+          </li>
+        </ul>
+        
+      </div>
+    </div>
+  </nav>
